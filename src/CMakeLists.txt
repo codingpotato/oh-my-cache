@@ -13,3 +13,13 @@ add_test_executable(NAME
                     vector_traversal
                     SOURCES
                     vector_traversal.cpp)
+
+add_test_executable(NAME
+                    parallel_traversal
+                    SOURCES
+                    parallel_traversal.cpp)
+
+add_test_executable(NAME
+                    parallel_traversal_locality
+                    SOURCES
+                    parallel_traversal_locality.cpp)
