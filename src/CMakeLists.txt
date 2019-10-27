@@ -28,3 +28,13 @@ add_test_executable(NAME
                     is_bool_atomic
                     SOURCES
                     is_bool_atomic.cpp)
+
+add_test_executable(NAME
+                    oop
+                    SOURCES
+                    oop.cpp)
+
+add_test_executable(NAME
+                    non_oop
+                    SOURCES
+                    non_oop.cpp)

@@ -7,7 +7,7 @@
 using vector_row = std::vector<int>;
 using vector_2d = std::vector<vector_row>;
 
-long vector_traversal_by_row(const vector_2d& v) {
+inline long vector_traversal_by_row(const vector_2d& v) {
   long sum = 0;
   for (auto& row : v) {
     for (auto n : row) {
@@ -17,7 +17,7 @@ long vector_traversal_by_row(const vector_2d& v) {
   return sum;
 }
 
-long vector_traversal_by_column(const vector_2d& v) {
+inline long vector_traversal_by_column(const vector_2d& v) {
   long sum = 0;
   if (!v.empty()) {
     for (size_t column = 0; column < v[0].size(); ++column) {
@@ -29,14 +29,14 @@ long vector_traversal_by_column(const vector_2d& v) {
   return sum;
 }
 
-long vector_traversal_by_accumulate(const vector_2d& v) {
+inline long vector_traversal_by_accumulate(const vector_2d& v) {
   return std::accumulate(v.begin(), v.end(), 0l,
                          [](long sum, const vector_row& row) {
                            return std::accumulate(row.begin(), row.end(), sum);
                          });
 }
 
-vector_2d make_vector(size_t row_count, size_t column_count) {
+inline vector_2d make_vector(size_t row_count, size_t column_count) {
   auto v = vector_2d(row_count, vector_row(column_count, 0));
   for (size_t i = 0; i < row_count; ++i) {
     for (size_t j = 0; j < column_count; ++j) {
