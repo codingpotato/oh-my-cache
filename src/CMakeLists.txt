@@ -23,3 +23,8 @@ add_test_executable(NAME
                     parallel_traversal_locality
                     SOURCES
                     parallel_traversal_locality.cpp)
+
+add_test_executable(NAME
+                    is_bool_atomic
+                    SOURCES
+                    is_bool_atomic.cpp)
