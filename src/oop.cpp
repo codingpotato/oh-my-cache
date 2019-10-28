@@ -6,7 +6,6 @@
 #include "measure.hpp"
 
 struct Shape {
- public:
   Shape() = default;
   Shape(const Shape&) = delete;
   Shape(Shape&&) = delete;
@@ -18,7 +17,6 @@ struct Shape {
 };
 
 struct Line : public Shape {
- public:
   Line(double startX, double startY, double endX, double endY)
       : startX_{startX}, startY_{startY}, endX_{endX}, endY_{endY} {}
 
@@ -37,7 +35,6 @@ struct Line : public Shape {
 };
 
 struct Rectangle : public Shape {
- public:
   Rectangle(double left, double top, double width, double height)
       : left_{left}, top_{top}, width_{width}, height_{height} {}
 
@@ -54,7 +51,6 @@ struct Rectangle : public Shape {
 };
 
 struct Circle : public Shape {
- public:
   Circle(double centerX, double centerY, double radius)
       : centerX_{centerX}, centerY_{centerY}, radius_{radius} {}
 

@@ -7,18 +7,11 @@
 #include "measure.hpp"
 
 struct Line {
- public:
   Line(double startX, double startY, double endX, double endY)
       : startX_{startX}, startY_{startY}, endX_{endX}, endY_{endY} {}
 
   double area() const { return 0; }
 
-  double startX() const { return startX_; }
-  double startY() const { return startY_; }
-  double endX() const { return endX_; }
-  double endY() const { return endY_; }
-
- private:
   double startX_;
   double startY_;
   double endX_;
@@ -26,16 +19,11 @@ struct Line {
 };
 
 struct Rectangle {
- public:
   Rectangle(double left, double top, double width, double height)
       : left_{left}, top_{top}, width_{width}, height_{height} {}
 
   double area() const { return width_ * height_; }
 
-  double left() const { return left_; }
-  double top() const { return top_; }
-
- private:
   double left_;
   double top_;
   double width_;
@@ -43,16 +31,11 @@ struct Rectangle {
 };
 
 struct Circle {
- public:
   Circle(double centerX, double centerY, double radius)
       : centerX_{centerX}, centerY_{centerY}, radius_{radius} {}
 
   double area() const { return M_PI * radius_ * radius_; }
 
-  double centerX() const { return centerX_; }
-  double centerY() const { return centerY_; }
-
- private:
   double centerX_;
   double centerY_;
   double radius_;
