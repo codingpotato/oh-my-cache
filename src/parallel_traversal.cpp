@@ -14,6 +14,9 @@ inline long parallel_traversal(const vector_2d& v, size_t thread_count) {
   for (size_t i = 0; i < thread_count; ++i) {
     threads.emplace_back([&v, thread_count, &results, i]() {
       auto length = v.size() / thread_count;
+      if (v.size() % thread_count) {
+        length += 1;
+      }
       auto start = length * i;
       auto end = std::min(start + length, v.size());
       for (auto row = start; row < end; ++row) {
