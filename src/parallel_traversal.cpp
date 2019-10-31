@@ -8,7 +8,7 @@
 using vector_row = std::vector<int>;
 using vector_2d = std::vector<vector_row>;
 
-inline long parallel_traversal(const vector_2d& v, size_t thread_count) {
+long parallel_traversal(const vector_2d& v, size_t thread_count) {
   auto results = std::vector<long>(thread_count, 0);
   std::vector<std::thread> threads;
   for (size_t i = 0; i < thread_count; ++i) {
@@ -32,7 +32,7 @@ inline long parallel_traversal(const vector_2d& v, size_t thread_count) {
   return std::accumulate(results.begin(), results.end(), 0l);
 }
 
-inline vector_2d make_vector(size_t row_count, size_t column_count) {
+vector_2d make_vector(size_t row_count, size_t column_count) {
   auto v = vector_2d(row_count, vector_row(column_count, 0));
   for (size_t i = 0; i < row_count; ++i) {
     for (size_t j = 0; j < column_count; ++j) {

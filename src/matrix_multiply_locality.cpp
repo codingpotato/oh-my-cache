@@ -35,6 +35,5 @@ Matrix make_matrix(size_t row_count, size_t column_count) {
 int main() {
   auto a = make_matrix(1000, 500);
   auto b = make_matrix(500, 1000);
-  auto result =
-      measure("Matrix multiply locality", [&a, &b]() { return a * b; });
+  auto result = measure("Matrix multiply", [&a, &b]() { return a * b; });
 }
