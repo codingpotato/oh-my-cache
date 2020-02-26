@@ -1,10 +1,11 @@
 #pragma once
 
 #include <chrono>
+#include <iostream>
 #include <string>
 
 template <typename F>
-inline auto measure(const std::string& test_name, F&& f) {
+inline auto measure(const std::string &test_name, F f) {
   auto start = std::chrono::steady_clock::now();
 
   auto result = f();

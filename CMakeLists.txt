@@ -57,3 +57,8 @@ add_test_executable(NAME
                     matrix_multiply_locality
                     SOURCES
                     src/matrix_multiply_locality.cpp)
+
+add_test_executable(NAME
+                    variant
+                    SOURCES
+                    src/variant.cpp)
